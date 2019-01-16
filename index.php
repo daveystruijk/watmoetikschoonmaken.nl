@@ -7,6 +7,7 @@ use Carbon\Carbon;
 $rooster = [
   'GR', 'Keuken', 'Badkamer Zolder', 'Badkamer'
 ];
+$offset = 1;
 
 $date = Carbon::now();
 $weekNr = (int)$date->format('W');
@@ -19,7 +20,6 @@ if ($dayOfWeek > 4) {
   $weekNr++;
 }
 
-
 ?>
 <!doctype html>
 
@@ -30,15 +30,33 @@ if ($dayOfWeek > 4) {
   <title>Wat moet ik schoonmaken???</title>
   <meta name="author" content="Davey Struijk">
 
+  <meta name="viewport" content="width=device-width, initial-scale=1" /> 
   <link rel="stylesheet" href="styles.css?v=1.0">
 </head>
 
 <body>
 <div id="container">
-  <div id="block">
-    <h1>Martin, Dave:</h1>
+  <div class="block">
+    <h3>Stroetsja & Spoederjonkel</h3>
+    <hr />
+    <h1><?php echo $rooster[(0 + ($weekNr % 4) + $offset) % 4]; ?></h1>
   </div>
-<p>Week <?php echo $weekNr, ' (', $startOfWeek->format('Y-m-d'), ')'; ?></p>
+  <div class="block">
+    <h3>Mr. Pinters & Bastaardkind</h3>
+    <hr />
+    <h1><?php echo $rooster[(1 + ($weekNr % 4) + $offset) % 4]; ?></h1>
+  </div>
+  <div class="block">
+    <h3>Kok&sup2; & Gobljonkel</h3>
+    <hr />
+    <h1><?php echo $rooster[(2 + ($weekNr % 4) + $offset) % 4]; ?></h1>
+  </div>
+  <div class="block">
+    <h3>Asperge & Geenknieknonkel</h3>
+    <hr />
+    <h1><?php echo $rooster[(3 + ($weekNr % 4) + $offset) % 4]; ?></h1>
+  </div>
+<p>Week <?php echo $weekNr, ' (', $startOfWeek->format('m-d'), ')'; ?></p>
 </div>
 </body>
 </html>
