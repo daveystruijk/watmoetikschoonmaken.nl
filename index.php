@@ -52,7 +52,7 @@ if ($dayOfWeek > 4) {
     <h1><?php echo $rooster[(2 + ($weekNr % 4) + $offset) % 4]; ?></h1>
   </div>
   <div class="block">
-    <h3>Asperge & Geenknieknonkel</h3>
+    <h3>Azzi & Melvin Krabbenvanger</h3>
     <hr />
     <h1><?php echo $rooster[(3 + ($weekNr % 4) + $offset) % 4]; ?></h1>
   </div>
