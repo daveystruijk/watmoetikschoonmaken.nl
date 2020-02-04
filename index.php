@@ -19,6 +19,7 @@ if ($dayOfWeek > 4) {
   $startOfWeek->addWeeks(1);
   $weekNr++;
 }
+$endOfWeek = $date->endOfWeek();
 
 ?>
 <!doctype html>
@@ -37,26 +38,29 @@ if ($dayOfWeek > 4) {
 <body>
 <div id="container">
   <div class="block">
+    <h3>Week <?php echo $weekNr, ' (', $startOfWeek->format('M d'), ' - ', $endOfWeek->format('M d'), ')'; ?></h3>
+  </div>
+  <div class="block">
     <h3>Stroetsja & Spoederjonkel</h3>
     <hr />
     <h1><?php echo $rooster[(0 + ($weekNr % 4) + $offset) % 4]; ?></h1>
   </div>
   <div class="block">
-    <h3>Mr. Pinters & Bastaardkind</h3>
+    <h3>Kok&sup2; & Bastaardkind</h3>
     <hr />
     <h1><?php echo $rooster[(1 + ($weekNr % 4) + $offset) % 4]; ?></h1>
   </div>
   <div class="block">
-    <h3>Kok&sup2; & Gobljonkel</h3>
+    <h3>Vlugge Japie & Gobljonkel</h3>
     <hr />
     <h1><?php echo $rooster[(2 + ($weekNr % 4) + $offset) % 4]; ?></h1>
   </div>
   <div class="block">
-    <h3>Azzi & Melvin Krabbenvanger</h3>
+    <h3>Buurman & Buurman</h3>
     <hr />
     <h1><?php echo $rooster[(3 + ($weekNr % 4) + $offset) % 4]; ?></h1>
   </div>
-<p>Week <?php echo $weekNr, ' (', $startOfWeek->format('m-d'), ')'; ?></p>
+  <audio src="./bling.mp3" autoplay loop>
 </div>
 </body>
 </html>
