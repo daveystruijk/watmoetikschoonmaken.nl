@@ -12,14 +12,15 @@ $offset = 1;
 $date = Carbon::now();
 $weekNr = (int)$date->format('W');
 $dayOfWeek = (int)$date->format('N');
-$startOfWeek = $date->startOfWeek();
+$startOfWeek = $date->copy()->startOfWeek();
+$endOfWeek = $date->copy()->endOfWeek();
 
 
 if ($dayOfWeek > 4) {
   $startOfWeek->addWeeks(1);
+  $endOfWeek->addWeeks(1);
   $weekNr++;
 }
-$endOfWeek = $date->endOfWeek();
 
 ?>
 <!doctype html>
