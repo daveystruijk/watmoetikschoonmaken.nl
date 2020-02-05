@@ -33,7 +33,7 @@ if ($dayOfWeek > 4) {
   <meta name="author" content="Davey Struijk">
 
   <meta name="viewport" content="width=device-width, initial-scale=1" /> 
-  <link rel="stylesheet" href="styles.css?v=1.0">
+  <link rel="stylesheet" href="styles.css?v=1.1">
 </head>
 
 <body>
@@ -61,7 +61,9 @@ if ($dayOfWeek > 4) {
     <hr />
     <h1><?php echo $rooster[(3 + ($weekNr % 4) + $offset) % 4]; ?></h1>
   </div>
-  <audio src="./bling.mp3" autoplay loop>
+  <audio controls autoplay="autoplay">
+    <source src="./bling.mp3" type="audio/mpeg" />
+  </audio>
 </div>
 </body>
 </html>
