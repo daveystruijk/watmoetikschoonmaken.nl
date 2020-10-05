@@ -42,22 +42,22 @@ if ($dayOfWeek > 4) {
     <h3>Week <?php echo $weekNr, ' (', $startOfWeek->format('M d'), ' - ', $endOfWeek->format('M d'), ')'; ?></h3>
   </div>
   <div class="block">
-    <h3>Stroetsja & Spoederjonkel</h3>
+    <h3>Stroetsja & Rickert</h3>
     <hr />
     <h1><?php echo $rooster[(0 + ($weekNr % 4) + $offset) % 4]; ?></h1>
   </div>
   <div class="block">
-    <h3>Kok&sup2; & Bastaardkind</h3>
+    <h3>Kok&sup2; & Melvin Krabbenvanger</h3>
     <hr />
     <h1><?php echo $rooster[(1 + ($weekNr % 4) + $offset) % 4]; ?></h1>
   </div>
   <div class="block">
-    <h3>Vlugge Japie & Gobljonkel</h3>
+    <h3>Vlugge Japie & Meesman</h3>
     <hr />
     <h1><?php echo $rooster[(2 + ($weekNr % 4) + $offset) % 4]; ?></h1>
   </div>
   <div class="block">
-    <h3>Buurman & Buurman</h3>
+    <h3>Spoederman & Laurens</h3>
     <hr />
     <h1><?php echo $rooster[(3 + ($weekNr % 4) + $offset) % 4]; ?></h1>
   </div>
